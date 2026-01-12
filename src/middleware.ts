@@ -14,10 +14,13 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Handle advies.omnitrex.nl subdomain (placeholder for now)
+  // Handle advies.omnitrex.nl subdomain
   if (hostname.startsWith("advies.")) {
-    // Will add /advies route later
-    // For now, just serve the main site
+    // Rewrite to /advies path
+    if (url.pathname === "/") {
+      url.pathname = "/advies";
+      return NextResponse.rewrite(url);
+    }
   }
 
   return NextResponse.next();
