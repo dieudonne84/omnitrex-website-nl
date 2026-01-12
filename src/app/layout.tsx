@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ComingSoon from "@/components/ComingSoon";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,6 +43,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isComingSoon = process.env.NEXT_PUBLIC_COMING_SOON === "true";
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -72,7 +75,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
-        {children}
+        {isComingSoon ? <ComingSoon /> : children}
       </body>
     </html>
   );
