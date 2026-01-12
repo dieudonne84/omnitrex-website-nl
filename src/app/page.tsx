@@ -105,7 +105,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Vermogenskluis Card */}
               <a
-                href="https://kluis.omnitrex.nl"
+                href="/kluis"
                 className="group p-8 bg-slate-800/50 border border-slate-700/50 rounded-2xl hover:border-orange-500/50 transition-all hover:shadow-lg hover:shadow-orange-500/10"
               >
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -154,7 +154,7 @@ export default function Home() {
 
               {/* Consultancy Card */}
               <a
-                href="https://advies.omnitrex.nl"
+                href="/advies"
                 className="group p-8 bg-slate-800/50 border border-slate-700/50 rounded-2xl hover:border-cyan-500/50 transition-all hover:shadow-lg hover:shadow-cyan-500/10"
               >
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">

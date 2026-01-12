@@ -6,8 +6,8 @@ interface FooterProps {
 
 export default function Footer({ currentPage }: FooterProps) {
   const productLinks = [
-    { href: "https://kluis.omnitrex.nl", label: "De Vermogenskluis", external: true },
-    { href: "https://advies.omnitrex.nl", label: "Advies & Consultancy", external: true },
+    { href: "/kluis", label: "De Vermogenskluis", external: false },
+    { href: "/advies", label: "Advies & Consultancy", external: false },
   ];
 
   const companyLinks = [
